@@ -3,12 +3,20 @@ import { View, FlatList } from "react-native";
 import ListItem from "../ListItem";
 
 export default function List(props) {
-  const list = props.list || [];
+  const list = sortList(props.list) || [];
 
   function onRemove(item) {
     if (props.onRemove) {
       return props.onRemove(item);
     } else return false;
+  }
+
+  function sortList(list) {
+    const newList = [...list].sort((a, b) => {
+      return a.body.name > b.body.name ? 1 : -1;
+    });
+
+    return newList;
   }
 
   return (

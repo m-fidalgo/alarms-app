@@ -17,7 +17,8 @@
     "@react-native-firebase/firestore": "^11.2.0",
     "@react-native-firebase/messaging": "^11.2.0",
     "react": "17.0.1",
-    "react-native": "0.64.0"
+    "react-native": "0.64.0",
+    "react-native-push-notification": "^7.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
